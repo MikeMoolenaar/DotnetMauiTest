@@ -8,7 +8,7 @@
         <ResourceDictionary>
 
             <Color x:Key="Primary_Light">#512bdf</Color>
-            <Color x:Key="Primary_Dark">#141682</Color>
+            <Color x:Key="Primary_Dark">#141683</Color>
             <Color x:Key="Background_Light">#999999</Color>
             <Color x:Key="Background_Dark">#000000</Color>
             <Color x:Key="Text_Light">Black</Color>
