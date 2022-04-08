@@ -15,6 +15,7 @@
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.mauiapp1</ApplicationId>
+		<ApplicationId Condition="$(TargetFramework.Contains('-windows'))">1CD0A983-580B-459D-9F18-2C2B97BC38FB</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationVersion>1</ApplicationVersion>
@@ -47,11 +48,6 @@
 		<!-- Required - WinUI does not yet have buildTransitive for everything -->
 		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
 		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.0.30" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.1" />
-	  <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>
