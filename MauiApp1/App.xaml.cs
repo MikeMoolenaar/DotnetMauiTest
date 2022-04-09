@@ -5,10 +5,18 @@ public partial class App : Application
 	public App()
 	{
 		InitializeComponent();
+		Init();
+	}
+
+	public void Init()
+    {
+		MainPage = new TabsPage();
+
+		// There's no other way to set the window size on Windows at the moment. 
+		// A better method is comming with https://github.com/dotnet/maui/pull/4942.
 #if WINDOWS
-		if (App.Current.UserAppTheme == AppTheme.Unspecified)
-			App.Current.UserAppTheme = AppTheme.Light;
+		//MainPage.WidthRequest = 450;
+		//MainPage.HeightRequest = 800;
 #endif
-		MainPage = new MainPage();
 	}
 }

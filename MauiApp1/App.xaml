@@ -28,7 +28,6 @@
                     Dark={StaticResource Text_Dark}}" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
             </Style>
-
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="{AppThemeBinding
                     Light={StaticResource Text_Light},

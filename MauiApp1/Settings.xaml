@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Settings"
+             Title="Settings"
+            Background="{AppThemeBinding 
+                Light={StaticResource Background_Light}, 
+                Dark={StaticResource Background_Dark}}">
+    <StackLayout>
+        <FlexLayout HeightRequest="100" Grid.Row="1" Direction="Column" AlignItems="Center" >
+            <Picker x:Name="PickerTheme" Title="Theme" SelectedIndexChanged="Picker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Follow system</x:String>
+                    <x:String>Dark</x:String>
+                    <x:String>Light</x:String>
+                </Picker.Items>
+            </Picker>
+            <Picker x:Name="PickerLang" Title="Theme" SelectedIndexChanged="PickerLang_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>English</x:String>
+                    <x:String>Dutch</x:String>
+                </Picker.Items>
+            </Picker>
+        </FlexLayout>
+    </StackLayout>
+</ContentPage>

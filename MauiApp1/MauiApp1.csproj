@@ -9,13 +9,12 @@
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
-    
+
 		<!-- Display name -->
 		<ApplicationTitle>MauiApp1</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.mauiapp1</ApplicationId>
-		<ApplicationId Condition="$(TargetFramework.Contains('-windows'))">1CD0A983-580B-459D-9F18-2C2B97BC38FB</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationVersion>1</ApplicationVersion>
@@ -51,18 +50,30 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Resources\Resource1.Designer.cs">
+	  <Compile Update="TabsPage.xaml.cs">
+	    <DependentUpon>TabsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\AppRes.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Resource1.resx</DependentUpon>
+	    <DependentUpon>AppRes.resx</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Update="Resources\Resource1.resx">
+	  <EmbeddedResource Update="Resources\AppRes.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+	    <LastGenOutput>AppRes.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="TabsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Settings.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
