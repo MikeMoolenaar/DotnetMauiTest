@@ -1,6 +1,6 @@
 namespace MauiApp1;
 
-public partial class TabsPage : TabbedPage
+public partial class TabsPage
 {
 	public TabsPage()
 	{

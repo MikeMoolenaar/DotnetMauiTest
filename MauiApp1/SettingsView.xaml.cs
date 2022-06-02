@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace MauiApp1;
+namespace MauiApp1.Views;
 
 public partial class Settings : ContentPage
 {
@@ -8,7 +8,7 @@ public partial class Settings : ContentPage
 	public Settings()
 	{
 		InitializeComponent();
-		PickerTheme.SelectedIndex = 0;
+		PickerTheme.SelectedIndex = (int)App.Current.UserAppTheme;
 		PickerLang.SelectedIndex = Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName == "en" ? 0 : 1;
 		viewReady = true;
 	}

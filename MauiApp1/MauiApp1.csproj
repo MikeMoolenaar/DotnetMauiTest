@@ -45,6 +45,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\gear_solid.svg" />
+	  <None Remove="Resources\Images\house_solid.svg" />
+	  <None Remove="Resources\Images\idk.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="MainPageView.xaml.cs">
+	    <DependentUpon>MainPageView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="SettingsView.xaml.cs">
+	    <DependentUpon>SettingsView.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="TabsPage.xaml.cs">
 	    <DependentUpon>TabsPage.xaml</DependentUpon>
 	  </Compile>
@@ -66,7 +78,7 @@
 	  <MauiXaml Update="TabsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Settings.xaml">
+	  <MauiXaml Update="SettingsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

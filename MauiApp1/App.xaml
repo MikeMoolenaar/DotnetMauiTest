@@ -9,18 +9,19 @@
 
             <Color x:Key="Primary_Light">#512bdf</Color>
             <Color x:Key="Primary_Dark">#141683</Color>
-            <Color x:Key="Background_Light">#999999</Color>
+            <Color x:Key="Background_Light">#FFFFFF</Color>
             <Color x:Key="Background_Dark">#000000</Color>
             <Color x:Key="Text_Light">Black</Color>
             <Color x:Key="Text_Dark">White</Color>
 
-            <!-- Doesnt work??? -->
-            <!--
-            <Style TargetType="ContentPage">
-                <Setter Property="Background" Value="{AppThemeBinding 
-                        Light={StaticResource Background_Light}, 
-                        Dark={StaticResource Background_Dark}}"/>
-            </Style>-->
+            <Style TargetType="TabBar">
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding 
+                        Light={StaticResource Primary_Light}, 
+                        Dark={StaticResource Primary_Dark}}" />
+                <Setter Property="Shell.TabBarTitleColor" Value="White" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="DarkGray" />
+            </Style>
+
 
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{AppThemeBinding
